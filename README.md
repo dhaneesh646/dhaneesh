@@ -1,106 +1,290 @@
-<!-- ════════════════════════════════════════════════════
-     AI OPERATING SYSTEM v3.0 — GITHUB PROFILE INTERFACE
-     ▸ Replace YOUR_USERNAME with your GitHub username
-     ▸ Replace the LinkedIn / email / portfolio links
-     ════════════════════════════════════════════════════ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ID — Dhaneesh.M</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<!-- ━━━ TOP HUD ━━━ -->
-<p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=cylinder&color=0:050816,50:0A2A5E,100:050816&height=200&section=header&text=DHANEESH&fontSize=64&fontColor=00E5FF&fontAlignY=45&animation=blinking&desc=AI%20OPERATING%20SYSTEM%20%C2%B7%20v3.0%20%C2%B7%20NEURAL%20INTERFACE%20ACTIVE&descSize=15&descAlignY=68&descColor=00FFD5&stroke=00E5FF&strokeWidth=1"/>
-</p>
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #050816;
+    font-family: 'Cascadia Code', 'Consolas', 'Courier New', monospace;
+    padding: 20px;
+  }
 
-<!-- ━━━ BOOT SEQUENCE ━━━ -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=19&duration=2000&pause=650&color=00E5FF&center=true&vCenter=true&width=650&lines=%3E+Initializing+profile...;%3E+Authenticating...;%3E+Identity+found:+DHANEESH;%3E+Loading+skills...;%3E+Loading+projects...;%3E+Access+granted.+Welcome,+visitor." alt="boot sequence"/>
-</p>
+  /* ══════════ LANDSCAPE CARD ══════════ */
+  .card {
+    position: relative;
+    width: 780px;
+    padding: 22px 28px 18px;
+    background: linear-gradient(160deg, rgba(0,229,255,.10), rgba(5,8,22,.92) 40%, rgba(61,139,255,.08));
+    border: 1px solid rgba(0,229,255,.35);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 0 45px rgba(0,229,255,.22), inset 0 0 60px rgba(0,229,255,.05);
+    animation: fadeUp .8s ease both;
+    display: flex;
+    gap: 24px;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
 
-<!-- ━━━ IDENTITY FILE ━━━ -->
-```text
-┌─[ IDENTITY FILE :: SCAN COMPLETE ]─────────────────────────────┐
-│                                                                │
-│  NAME           ::  DHANEESH                                   │
-│  ROLE           ::  Senior Full Stack Developer                │
-│  SPECIALIZATION ::  AI Automation · CRM Systems                │
-│                     Backend Engineering · Unity Development    │
-│  LOCATION       ::  India                                      │
-│  EXPERIENCE     ::  5+ Years                                   │
-│  MISSION        ::  Building next-generation AI-powered        │
-│                     CRM systems                                │
-│  STATUS         ::  ● ONLINE                                   │
-│                                                                │
-└─────────────────────────[ ACCESS GRANTED ]─────────────────────┘
-```
+  /* scanline texture */
+  .card::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(0deg, rgba(0,229,255,.045) 0 1px, transparent 1px 4px);
+    pointer-events: none;
+    z-index: 3;
+  }
 
-<!-- ━━━ SYSTEM STATUS ━━━ -->
-<p align="center">
-  <img src="https://img.shields.io/badge/CPU-74%25-00E5FF?style=flat-square&labelColor=050816"/>
-  <img src="https://img.shields.io/badge/GPU-61%25-3D8BFF?style=flat-square&labelColor=050816"/>
-  <img src="https://img.shields.io/badge/MEMORY-8.2GB-00FFD5?style=flat-square&labelColor=050816"/>
-  <img src="https://img.shields.io/badge/NETWORK-STABLE-00E5FF?style=flat-square&labelColor=050816"/>
-  <img src="https://komarev.com/ghpvc/?username=YOUR_USERNAME&label=PROFILE+SCANS&color=050816&style=flat-square"/>
-</p>
+  /* hologram sheen sweep */
+  .card::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(115deg,
+      transparent 30%, rgba(0,229,255,.08) 45%,
+      rgba(0,255,213,.16) 50%, rgba(61,139,255,.08) 55%,
+      transparent 70%);
+    transform: translateX(-110%);
+    animation: sheen 6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 2;
+  }
+  @keyframes sheen {
+    0%, 25%  { transform: translateX(-110%); }
+    65%, 100%{ transform: translateX(110%); }
+  }
 
-<!-- ━━━ SKILL MATRIX ━━━ -->
-<h2 align="center">⟨ SKILL MATRIX ⟩</h2>
+  /* ══════════ SCANNER LINE ══════════ */
+  .scan-line {
+    position: absolute;
+    left: 0; top: -4%;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, transparent, #00E5FF 30%, #00FFD5 50%, #00E5FF 70%, transparent);
+    box-shadow: 0 0 14px 3px rgba(0,229,255,.8), 0 0 50px 8px rgba(0,229,255,.3);
+    animation: scan 3.5s linear infinite;
+    z-index: 5;
+  }
+  @keyframes scan {
+    0%   { top: -3%;  opacity: 0; }
+    6%   { opacity: 1; }
+    94%  { opacity: 1; }
+    100% { top: 103%; opacity: 0; }
+  }
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=ts,nodejs,react,postgres,unity,py,docker,redis&theme=dark&perline=8"/>
-</p>
+  /* ══════════ HUD CORNER BRACKETS ══════════ */
+  .corner { position: absolute; width: 18px; height: 18px; border: 2px solid #00E5FF; z-index: 6; }
+  .tl { top: 8px; left: 8px;   border-right: none; border-bottom: none; }
+  .tr { top: 8px; right: 8px;  border-left: none;  border-bottom: none; }
+  .bl { bottom: 8px; left: 8px;   border-right: none; border-top: none; }
+  .br { bottom: 8px; right: 8px;  border-left: none;  border-top: none; }
 
-```text
-TypeScript    ██████████████░░   90%
-Node.js       █████████████░░░   85%
-React         ███████████░░░░░   78%
-PostgreSQL    ██████████████░░   88%
-Unity         ██████████░░░░░░   70%
-AI / LLM      ██████████████░░   92%
-```
+  /* ══════════ LEFT COLUMN ══════════ */
+  .left-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 150px;
+    z-index: 4;
+  }
 
-<!-- ━━━ TELEMETRY ━━━ -->
-<h2 align="center">⟨ TELEMETRY ⟩</h2>
+  .photo {
+    width: 128px; height: 128px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,229,255,.5);
+    box-shadow: 0 0 20px rgba(0,229,255,.35), inset 0 0 20px rgba(0,229,255,.12);
+    overflow: hidden;
+    background: rgba(0,229,255,.05);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(0,229,255,.4);
+    font-size: 11px;
+    letter-spacing: 2px;
+    flex-shrink: 0;
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&bg_color=050816&title_color=00E5FF&icon_color=00FFD5&text_color=EAFBFF&border_color=00E5FF"/>
-  <img height="165" src="https://streak-stats.demolab.com?user=YOUR_USERNAME&background=050816&border=00E5FF&ring=00E5FF&fire=00FFD5&currStreakNum=EAFBFF&sideNums=EAFBFF&currStreakLabel=00E5FF&sideLabels=3D8BFF&dates=6FBFFF"/>
-</p>
+  .name {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: #EAFBFF;
+    text-shadow: 0 0 12px rgba(0,229,255,.7);
+  }
+  .role {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #00E5FF;
+  }
+  .company {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #3D8BFF;
+    margin-top: -4px;
+  }
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&bg_color=050816&title_color=00E5FF&text_color=EAFBFF&border_color=00E5FF"/>
-</p>
+  .online-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #00FFD5;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 2px;
+  }
+  .dot {
+    width: 7px; height: 7px;
+    background: #00FFD5;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00FFD5;
+    animation: blink 1.4s infinite;
+  }
+  @keyframes blink { 50% { opacity: .25; } }
 
-<p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=YOUR_USERNAME&bg_color=050816&color=00E5FF&line=00FFD5&point=EAFBFF&area=true&area_color=0A2A5E&custom_title=NEURAL%20ACTIVITY%20LOG"/>
-</p>
+  /* ══════════ RIGHT COLUMN ══════════ */
+  .right-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 4;
+    min-width: 0;
+  }
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=YOUR_USERNAME&theme=algolia&no-frame=true&column=7"/>
-</p>
+  .head {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #3D8BFF;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed rgba(0,229,255,.25);
+  }
 
-<!-- ━━━ ACTIVE MISSIONS ━━━ -->
-<h2 align="center">⟨ ACTIVE MISSIONS ⟩</h2>
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 2px;
+    font-size: 12px;
+    border-bottom: 1px dashed rgba(0,229,255,.15);
+  }
+  .row:last-of-type { border-bottom: none; }
+  .label { color: #3D8BFF; letter-spacing: 2px; font-size: 10px; white-space: nowrap; }
+  .value { color: #EAFBFF; letter-spacing: 1px; text-shadow: 0 0 6px rgba(0,229,255,.4); text-align: right; }
 
-| Project | Description | Stack |
-|:-:|:-:|:-:|
-| 🤖 **AI CRM** | Next-gen AI-powered CRM platform | TypeScript · Node · PostgreSQL |
-| ⚙️ **Automation Engine** | Workflow & task automation core | Node.js · Redis |
-| 🧠 **Meeting Intelligence** | AI meeting summaries & insights | Python · LLMs |
-| ✉️ **Email AI** | Smart email drafting & triage | TypeScript · AI |
-| 🔗 **Webhook Engine** | Real-time event delivery system | Node.js · PostgreSQL |
+  /* ══════════ FOOTER BARCODE ══════════ */
+  .barcode-wrap {
+    margin-top: auto;
+    padding-top: 8px;
+  }
+  .barcode {
+    height: 22px;
+    background: repeating-linear-gradient(90deg,
+      #00E5FF 0 2px, transparent 2px 5px,
+      #00E5FF 5px 6px, transparent 6px 12px,
+      #00E5FF 12px 15px, transparent 15px 18px);
+    opacity: .55;
+  }
+  .id-no {
+    text-align: center;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: rgba(0,229,255,.55);
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
 
-<!-- ━━━ ESTABLISH CONNECTION ━━━ -->
-<h2 align="center">⟨ ESTABLISH CONNECTION ⟩</h2>
+  <div class="card">
+    <!-- HUD corners -->
+    <div class="corner tl"></div><div class="corner tr"></div>
+    <div class="corner bl"></div><div class="corner br"></div>
 
-<p align="center">
-  <a href="https://linkedin.com/in/YOUR_LINKEDIN"><img src="https://img.shields.io/badge/LINKEDIN-CONNECT-00E5FF?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=050816"/></a>
-  <a href="mailto:youremail@gmail.com"><img src="https://img.shields.io/badge/EMAIL-TRANSMIT-00FFD5?style=for-the-badge&logo=gmail&logoColor=white&labelColor=050816"/></a>
-  <a href="https://your-portfolio.com"><img src="https://img.shields.io/badge/PORTFOLIO-UPLINK-3D8BFF?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=050816"/></a>
-</p>
+    <!-- scanner line -->
+    <div class="scan-line"></div>
 
-<!-- ━━━ TERMINAL FOOTER ━━━ -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=14&duration=3000&pause=1000&color=3D8BFF&center=true&vCenter=true&width=500&lines=%3E+Session+logged.;%3E+Neural+link+stable.;%3E+System+standing+by..." alt="terminal"/>
-</p>
+    <!-- LEFT COLUMN -->
+    <div class="left-col">
+      <div class="photo">
+        <!-- ▼ PUT YOUR PHOTO HERE: replace "photo.jpg" with your image file name ▼ -->
+        <img src="photo.jpg" alt="Profile Photo" onerror="this.parentElement.textContent='PHOTO'">
+      </div>
+      <div class="name">DHANEESH.M</div>
+      <div class="role">SOFTWARE ENGINEER</div>
+      <div class="company">AUGRAY</div>
+      <div class="online-badge"><span class="dot"></span>ONLINE</div>
+    </div>
 
-<p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=cylinder&color=0:050816,50:0A2A5E,100:050816&height=120&section=footer&text=CONNECTION%20SECURED&fontSize=22&fontColor=00E5FF&stroke=00E5FF&strokeWidth=1"/>
-</p>
+    <!-- RIGHT COLUMN -->
+    <div class="right-col">
+      <div class="head">
+        <span id="current-date"></span>
+      </div>
+
+      <div class="row"><span class="label">AGE</span><span class="value" id="age-display">--</span></div>
+      <div class="row"><span class="label">EMAIL</span><span class="value">dhaneeshmofficial@gmail.com</span></div>
+      <div class="row"><span class="label">LOCATION</span><span class="value">India</span></div>
+      <div class="row"><span class="label">EXPERIENCE</span><span class="value" id="exp-display">--</span></div>
+      <div class="row"><span class="label">EDUCATION</span><span class="value">B.Sc. Software Systems · M.Sc. Information Technology</span></div>
+      <div class="row"><span class="label">SPECIALIZATION</span><span class="value">Backend Engineering · Unity · AI Automation · CRM Systems</span></div>
+      <div class="row"><span class="label">MISSION</span><span class="value">Building next-generation AI-powered CRM systems</span></div>
+
+      <div class="barcode-wrap">
+        <div class="barcode"></div>
+        <div class="id-no">ID : 17042003-DN</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Calculate AGE from D.O.B: 17.04.2003
+    const dob = new Date(2003, 3, 17);
+    const now = new Date();
+    let age = now.getFullYear() - dob.getFullYear();
+    const monthDiff = now.getMonth() - dob.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < dob.getDate())) {
+      age--;
+    }
+    document.getElementById("age-display").textContent = age + " Years";
+
+    // Calculate EXPERIENCE from join date: 06.03.2023
+    const joinDate = new Date(2023, 2, 6);
+    let years = now.getFullYear() - joinDate.getFullYear();
+    let months = now.getMonth() - joinDate.getMonth();
+    if (now.getDate() < joinDate.getDate()) {
+      months--;
+    }
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+    let expText = "";
+    if (years > 0) expText += years + " Yr" + (years > 1 ? "s" : "");
+    if (months > 0) {
+      if (expText) expText += " ";
+      expText += months + " Mo" + (months > 1 ? "s" : "");
+    }
+    if (!expText) expText = "< 1 Mo";
+    document.getElementById("exp-display").textContent = expText;
+
+    // Current date display
+    const dateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+    document.getElementById("current-date").textContent = now.toLocaleDateString('en-US', dateOptions).toUpperCase();
+  </script>
+
+</body>
+</html>
